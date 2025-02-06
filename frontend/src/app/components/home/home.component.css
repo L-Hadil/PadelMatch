@@ -1,0 +1,12 @@
+.home-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-buttons button {
+  margin: 10px;
+}

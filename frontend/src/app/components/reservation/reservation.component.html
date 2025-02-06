@@ -1,0 +1,32 @@
+<div class="reservation-container">
+  <h2>Réserver un Terrain</h2>
+  <div class="terrains">
+    <div *ngFor="let terrain of terrains" class="terrain-card" [ngClass]="terrain.status">
+      <h3>{{ terrain.name }}</h3>
+      <p>Status: {{ terrain.status }}</p>
+      <button mat-raised-button color="primary" (click)="selectTerrain(terrain)"
+              [disabled]="terrain.status !== 'ouvert'">Sélectionner</button>
+    </div>
+  </div>
+
+  <div *ngIf="selectedTerrain">
+    <h3>Réserver {{ selectedTerrain.name }}</h3>
+    <form (ngSubmit)="makeReservation()" #reservationForm="ngForm">
+      <mat-form-field>
+        <mat-label>Heure de début</mat-label>
+        <input matInput [matDatepicker]="startDatePicker" [(ngModel)]="reservation.dateHeureDebut" name="dateHeureDebut" required>
+        <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #startDatePicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Heure de fin</mat-label>
+        <input matInput [matDatepicker]="endDatePicker" [(ngModel)]="reservation.dateHeureFin" name="dateHeureFin" required>
+        <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #endDatePicker></mat-datepicker>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!reservationForm.form.valid">Réserver</button>
+    </form>
+  </div>
+</div>

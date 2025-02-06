@@ -1,0 +1,13 @@
+<form (ngSubmit)="login()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nom d'utilisateur</mat-label>
+    <input matInput [(ngModel)]="utilisateur.username" name="username" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" [(ngModel)]="utilisateur.password" name="password" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Connexion</button>
+</form>

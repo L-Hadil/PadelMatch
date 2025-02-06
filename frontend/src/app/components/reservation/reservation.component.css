@@ -1,0 +1,55 @@
+.reservation-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.terrains {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.terrain-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.terrain-card h3 {
+  margin-top: 0;
+}
+
+.terrain-card.ouvert {
+  border-color: green;
+}
+
+.terrain-card.maintenance {
+  border-color: orange;
+}
+
+.terrain-card.occupee {
+  border-color: red;
+}
+
+form {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 100%;
+}

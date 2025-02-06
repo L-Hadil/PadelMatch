@@ -1,0 +1,23 @@
+<form (ngSubmit)="register()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nom d'utilisateur</mat-label>
+    <input matInput [(ngModel)]="utilisateur.username" name="username" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" [(ngModel)]="utilisateur.email" name="email" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" [(ngModel)]="utilisateur.password" name="password" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Numéro de téléphone</mat-label>
+    <input matInput [(ngModel)]="utilisateur.phoneNumber" name="phoneNumber" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">S'inscrire</button>
+</form>
